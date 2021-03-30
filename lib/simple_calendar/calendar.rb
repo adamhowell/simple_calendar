@@ -39,6 +39,8 @@ module SimpleCalendar
       td_class << "wday-#{day.wday}"
       
       # all days
+      td_class << "border"
+      td_class << "border-t-0"
       td_class << "border-gray-200"
       td_class << "dark:border-gray-600"
       td_class << "dark:bg-gray-700"
