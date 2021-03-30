@@ -35,8 +35,9 @@ module SimpleCalendar
     def td_classes_for(day)
       today = Date.current
 
-      td_class = ["day, dark:bg-gray-700"]
+      td_class = ["day"]
       td_class << "wday-#{day.wday}"
+      td_class << "dark:bg-gray-700"
       td_class << "today" if today == day
       td_class << "past" if today > day
       td_class << "future" if today < day
