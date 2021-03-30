@@ -35,7 +35,7 @@ module SimpleCalendar
     def td_classes_for(day)
       today = Date.current
 
-      td_class = ["day"]
+      td_class = ["day, dark:bg-gray-700"]
       td_class << "wday-#{day.wday}"
       td_class << "today" if today == day
       td_class << "past" if today > day
@@ -46,7 +46,7 @@ module SimpleCalendar
       td_class << "current-month" if start_date.month == day.month
       td_class << "has-events" if sorted_events.fetch(day, []).any?
 
-      td_class + "dark:bg-gray-700"
+      td_class
     end
 
     def tr_classes_for(week)
