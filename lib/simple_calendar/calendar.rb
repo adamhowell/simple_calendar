@@ -46,7 +46,7 @@ module SimpleCalendar
       td_class << "current-month" if start_date.month == day.month
       td_class << "has-events" if sorted_events.fetch(day, []).any?
 
-      td_class
+      td_class + "dark:bg-gray-700"
     end
 
     def tr_classes_for(week)
