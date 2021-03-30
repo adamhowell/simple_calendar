@@ -37,13 +37,26 @@ module SimpleCalendar
 
       td_class = ["day"]
       td_class << "wday-#{day.wday}"
+      
+      # all days
+      td_class << "border-gray-200"
+      td_class << "dark:border-gray-600"
       td_class << "dark:bg-gray-700"
+      
+      # just today
       td_class << "today" if today == day
+      td_class << "bg-blue-100" if today == day
+      td_class << "dark:bg-gray-600" if today == day
+
       td_class << "past" if today > day
       td_class << "future" if today < day
       td_class << "start-date" if day.to_date == start_date.to_date
+
+      # just today
       td_class << "prev-month" if start_date.month != day.month && day < start_date
       td_class << "next-month" if start_date.month != day.month && day > start_date
+      td_class << "dark:bg-gray-800" if start_date.month != day.month && day < start_date && day > start_date
+
       td_class << "current-month" if start_date.month == day.month
       td_class << "has-events" if sorted_events.fetch(day, []).any?
 
