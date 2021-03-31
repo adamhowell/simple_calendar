@@ -42,7 +42,7 @@ module SimpleCalendar
       td_class << "border"
       td_class << "border-t-0"
       td_class << "border-gray-200"
-      td_class << "dark:border-gray-500" if start_date.month == day.month
+      td_class << "dark:border-gray-500"
       
       # just today
       td_class << "today" if today == day
