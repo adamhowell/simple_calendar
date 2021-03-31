@@ -13,22 +13,17 @@
   }
 
   th {
-    padding: 6px;
     border-collapse: collapse;
     box-sizing: border-box;
     text-align: left;
   }
 
   td {
-    padding: 6px;
     vertical-align: top;
     width: 14%;
   }
 
-  .day {
-    height: 80px;
-  }
-
+  .day {}
   .wday-0 {}
   .wday-1 {}
   .wday-2 {}
@@ -37,22 +32,13 @@
   .wday-5 {}
   .wday-6 {}
 
-  .today {
-    background: #FFFFC0
-  }
+  .today {}
 
   .past {}
   .future {}
-
   .start-date {}
-
-  .prev-month {
-    background: #DDD;
-  }
-  .next-month {
-    background: #DDD;
-  }
+  .prev-month {}
+  .next-month {}
   .current-month {}
-
   .has-events {}
 }
