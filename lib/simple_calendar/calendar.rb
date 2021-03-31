@@ -47,8 +47,6 @@ module SimpleCalendar
       
       # just today
       td_class << "today" if today == day
-      td_class << "bg-purple-100" if today == day
-      td_class << "dark:bg-gray-800" if today == day
 
       td_class << "past" if today > day
       td_class << "future" if today < day
