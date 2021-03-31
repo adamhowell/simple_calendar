@@ -57,7 +57,7 @@ module SimpleCalendar
       # just today
       td_class << "prev-month" if start_date.month != day.month && day < start_date
       td_class << "next-month" if start_date.month != day.month && day > start_date
-      td_class << "dark:bg-gray-800" if start_date.month != day.month && day < start_date && day > start_date
+      td_class << "dark:bg-gray-800" if start_date.month != day.month && (day < start_date || day > start_date)
 
       td_class << "current-month" if start_date.month == day.month
       td_class << "has-events" if sorted_events.fetch(day, []).any?
