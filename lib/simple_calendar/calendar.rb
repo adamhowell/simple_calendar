@@ -54,6 +54,7 @@ module SimpleCalendar
       # prev and next months
       td_class << "prev-month" if start_date.month != day.month && day < start_date
       td_class << "next-month" if start_date.month != day.month && day > start_date
+      td_class << "bg-gray-100" if start_date.month != day.month && (day < start_date || day > start_date)
       td_class << "dark:bg-gray-800" if start_date.month != day.month && (day < start_date || day > start_date)
 
       # current month
